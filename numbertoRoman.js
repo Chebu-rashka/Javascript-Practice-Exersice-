@@ -4,27 +4,45 @@
 // [I,   IV,   V,   IX,   X,    XL,    L,    XC,     C ]
 //    convertToRoman(22) → XXII
 //    convertToRoman(39) → XXXIX
+const romanCon={
+    1:"I",
+    4: "IV",
+    5: "V",
+    9: "IX",
+    10: "X",
+    40: "XL",
+    50: "L",
+    90: "XC",
+    100: "C"
 
-
-function toRoman(number){
-    let converting=new Map();
-    converting.set("I",1);
-    converting.set("V",5);
-    converting.set("X",10);
-    converting.set("L",50);
-    converting.set("C",100);
-    converting.set("D",500);
-    converting.set("M",1000);
-
-
-
-
-let too=0
-    for(let char of number){
-        too+=converting.get(char);
-        return too
+}
+const toRoman = (num)=>{
+   console.log(num)
+    if(typeof num!=='number'){
+        console.log(`${num} is not`)
+        return
     }
-    console.Log(too)
+if(num<=0){
+    console.log("given number us not positive")
+    return
 }
 
-toRoman("22")
+let romanNumber=''
+Object.entries(romanCon).reverse().forEach(([int,rom])=> {
+int = parseInt(int)
+console.log(int,rom)
+while(num>= int) {
+    romanNumber+= rom
+    num-=int
+}
+})
+
+console.log(romanNumber)
+}
+
+toRoman(22)
+
+//22 n 10aas ih bgagga shalgaad 
+//12oos ih bnuu shalgan
+//2oos ih uu ugui yu
+//1-ees ih bnu ugui bnuu shalgaad unen bvl i nemeed undsen toonoos hasna
