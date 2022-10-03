@@ -1,0 +1,23 @@
+function toFahrenheit(Celsius,) {
+    return Celsius*(9/5)+32
+    
+    }
+    const convert = toFahrenheit(10)
+    console.log(convert)
+
+
+    // converting Fahrenheit to Celsius  
+
+   
+   
+   
+function toCelsius(Fahrenheit) {
+        return(5/9)*(Fahrenheit-32)
+    }
+    const convert1 =toCelsius(50)
+    console.log(convert1)
+
+    // converting Celsius to Fahrenheit
+
+   
+    
